@@ -1,0 +1,21 @@
+name: govendor
+version: 1.0.8
+summary: A dependency vendoring tool for Go development.
+description: >
+  govendor helps maintains Go dependencies and vendoring. See
+  https://github.com/kardianos/govendor for details.
+type: app
+confinement: classic
+grade: stable
+apps:
+  govendor:
+    command: bin/govendor
+parts:
+  govendor:
+    plugin: go
+    #go-packages:
+    #  - github.com/kardianos/govendor
+    go-importpath: github.com/kardianos/govendor
+    source: https://github.com/kardianos/govendor
+    source-type: git
+    source-tag: v1.0.8
