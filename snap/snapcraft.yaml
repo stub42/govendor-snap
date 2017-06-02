@@ -1,5 +1,5 @@
 name: govendor
-version: edge
+version: git
 summary: A dependency vendoring tool for Go development.
 description: >
   govendor helps maintains Go dependencies and vendoring. See
@@ -7,6 +7,8 @@ description: >
 type: app
 confinement: classic
 grade: stable
+version-script: |
+  git -C parts/govendor/src describe --tags --always
 apps:
   govendor:
     command: bin/govendor
